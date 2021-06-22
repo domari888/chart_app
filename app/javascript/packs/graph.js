@@ -3,9 +3,8 @@ import { Chart } from "chart.js/dist/chart";
 // turbolinksの読み込みを待つためのコードを追加しておく必要がある
 document.addEventListener("turbolinks:load", () => {
   // 折れ線グラフのデータ
-  const lineLabel = ["1/1", "1/2", "1/4", "1/5", "1/6", "1/7"]
-  const lineData = [60.3, 61.1, 60.8, null, 60.5, 61.4]
-
+  const lineLabel = gon.chart_label
+  const lineData = gon.chart_data
   // 折れ線グラフのオプション
   const lineChartData = {
     labels: lineLabel,
